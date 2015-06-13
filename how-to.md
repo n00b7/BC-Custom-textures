@@ -1,8 +1,12 @@
- #1 - download forge here ----> https://files.minecraftforge.net
+make sure java is installed
+Make sure Forge is installed 
+
+*if you don not have them then go download & install both
+
+forge ----> https://files.minecraftforge.net
+
+Java -----> http://www.java.com
  
- make sure java is installed
- 
- Install forge 
 
 go to your user appdata folder - %appdata%
 
