@@ -1,5 +1,5 @@
-                                                                     download forge here https://files.minecraftforge.net
-                                                                                              make sure java is installed
+ #1 - download forge here https://files.minecraftforge.net
+ make sure java is installed
                                                                                                   execute the forge.jar 
                                                                                                   select client or server
                                                                 -------------------CLIENT ONLY---------------------------
