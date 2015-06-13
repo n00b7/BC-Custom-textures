@@ -13,6 +13,6 @@ go to .minecraft/mods and place in the folder
 change the eula=false to eula=true
 go to the mods folder
 place the .zip file in your mods directory
-run the server
+run the server 
 ------------------------------------------------------------
 enjoy and have fun :)
