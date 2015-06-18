@@ -1,0 +1,63 @@
+file 1:
+þº¾   2 4 -buildcraft/robotics/boards/BoardRobotMinecartBomber$1  java/lang/Object  &buildcraft/core/lib/utils/IBlockFilter  BoardRobotMinecartBomber.java +buildcraft/robotics/boards/BoardRobotMinecartBomber  update ()V 
+  this$0 -Lbuildcraft/robotics/boards/BoardRobotMinecartBomber; <init> 0(Lbuildcraft/robotics/boards/BoardRobotMinecartBomber;)V 
+ 	    
+   this /Lbuildcraft/robotics/boards/BoardRobotMinecartBomber$1; matches !(Lnet/minecraft/world/World;III)Z net/minecraft/world/World  func_72940_L ()I  
+   
+access$000 0(Lbuildcraft/robotics/boards/BoardRobotMinecartBomber;)I   
+ 	 ! 
+func_147437_c (III)Z # $
+  % world Lnet/minecraft/world/World; x I y z Code LocalVariableTable LineNumberTable 
+StackMapTable 
+SourceFile EnclosingMethod InnerClasses        
+          -   >     
+*+µ *· ±    .       
+       
+ 
+   /       <     -   ~     !+¶ *´ ¸ "d¢ +¶ &š § ¬    .   4    !       ! ' (    ! ) *    ! + *    ! , *  /       ? 0    @  1     2    	  3   
+        
+ FIle 2:
+ 
+ Êþº¾   2 Ï +buildcraft/robotics/boards/BoardRobotBomber  (buildcraft/api/boards/RedstoneBoardRobot  BoardRobotBomber.java -buildcraft/robotics/boards/BoardRobotBomber$1  
+TNT_Minecart_FILTER 4Lbuildcraft/core/lib/inventory/filters/IStackFilter; flyingHeight I <init> *(Lbuildcraft/api/robots/EntityRobotBase;)V  
+   
+ 	   this -Lbuildcraft/robotics/boards/BoardRobotMinecartBomber; iRobot 'Lbuildcraft/api/robots/EntityRobotBase; 
+getNBTHandler /()Lbuildcraft/api/boards/RedstoneBoardRobotNBT; %buildcraft/robotics/boards/BCBoardNBT  REGISTRY Ljava/util/Map;  	   bomber  
+java/util/Map   get &(Ljava/lang/Object;)Ljava/lang/Object; " # ! $ +buildcraft/api/boards/RedstoneBoardRobotNBT & update ()V robot * 	  + %buildcraft/api/robots/EntityRobotBase - 
+func_70302_i_ ()I / 0
+ . 1 func_70301_a !(I)Lnet/minecraft/item/ItemStack; 3 4
+ . 5 0buildcraft/robotics/ai/AIRobotGotoStationAndLoad 7  		  9 _(Lbuildcraft/api/robots/EntityRobotBase;Lbuildcraft/core/lib/inventory/filters/IStackFilter;I)V  ;
+ 8 < startDelegateAI "(Lbuildcraft/api/robots/AIRobot;)V > ?
+  @ 5buildcraft/robotics/ai/AIRobotSearchRandomGroundBlock B 0(Lbuildcraft/robotics/boards/BoardRobotMinecartBomber;)V  D
+  E 
+getZoneToWork ()Lbuildcraft/api/core/IZone; G H
+ . I n(Lbuildcraft/api/robots/EntityRobotBase;ILbuildcraft/core/lib/utils/IBlockFilter;Lbuildcraft/api/core/IZone;)V  K
+ C L i containItems Z delegateAIEnded buildcraft/api/robots/AIRobot R success ()Z T U
+ S V 'buildcraft/robotics/ai/AIRobotGotoSleep X
+ Y  'buildcraft/robotics/ai/AIRobotGotoBlock [ 
+blockFound  Lbuildcraft/api/core/BlockIndex; ] ^	 C _ buildcraft/api/core/BlockIndex a x c 	 b d y f 	 b g z i 	 b j -(Lbuildcraft/api/robots/EntityRobotBase;III)V  l
+ \ m (buildcraft/core/lib/inventory/Transactor o getTransactorFor ?(Ljava/lang/Object;)Lbuildcraft/core/lib/inventory/ITransactor; q r
+ p s -net/minecraftforge/common/util/ForgeDirection u UNKNOWN /Lnet/minecraftforge/common/util/ForgeDirection; w x	 v y )buildcraft/core/lib/inventory/ITransactor { remove „(Lbuildcraft/core/lib/inventory/filters/IStackFilter;Lnet/minecraftforge/common/util/ForgeDirection;Z)Lnet/minecraft/item/ItemStack; } ~ |  net/minecraft/item/ItemStack  
+field_77994_a ƒ 	 ‚ „ )net/minecraft/entity/item/EntityMinecartTNT † 
+field_70170_p Lnet/minecraft/world/World; ˆ ‰	 . Š 
+field_70165_t D Œ 	 . Ž?Ð       
+field_70163_u ’ 	 . “ 
+field_70161_v • 	 . – H(Lnet/minecraft/world/World;DDDLnet/minecraft/entity/EntityLivingBase;)V  ˜
+ ‡ ™ 
+field_70516_a › 	 ‡ œ net/minecraft/world/World ž func_72838_d  (Lnet/minecraft/entity/Entity;)Z   ¡
+ Ÿ ¢ game.minecart.tnt ¤ func_72956_a 4(Lnet/minecraft/entity/Entity;Ljava/lang/String;FF)V ¦ §
+ Ÿ ¨ aiFind 7Lbuildcraft/robotics/ai/AIRobotSearchRandomGroundBlock; tnt +Lnet/minecraft/entity/item/EntityMinecartTNT; t +Lbuildcraft/core/lib/inventory/ITransactor; stack Lnet/minecraft/item/ItemStack; ai Lbuildcraft/api/robots/AIRobot; *()Lbuildcraft/api/boards/RedstoneBoardNBT;  
+  µ 
+access$000 0(Lbuildcraft/robotics/boards/BoardRobotMinecartBomber;)I x0 <clinit> 6buildcraft/core/lib/inventory/filters/ArrayStackFilter » net/minecraft/init/Blocks ½ field_150335_W Lnet/minecraft/block/Block; ¿ À	 ¾ Á (Lnet/minecraft/block/Block;)V  Ã
+ ‚ Ä "([Lnet/minecraft/item/ItemStack;)V  Æ
+ ¼ Ç Code LocalVariableTable LineNumberTable 
+StackMapTable 
+SourceFile InnerClasses !        	    
+       
+  É   H     *+· *µ ±    Ê                  Ë       '  $  (     É   8     ² ¹ % À '°    Ê            Ë       ,  ( )  É   Ö     ]<=*´ ,¶ 2¢ *´ ,¶ 6Æ <„§ÿåš *» 8Y*´ ,² :· =¶ A§ #*» CY*´ ,d» Y*· F*´ ,¶ J· M¶ A±    Ê        N     ]      [ O P  Ë   .    1  3  4  5  3 " 9 & : < < S A Y < \ C Ì   
+ ý ú   Q ?  É  Æ    
++Á 8™ +¶ Wš þ*» YY*´ ,· Z¶ A§ ì+Á C™ M+¶ W™ 4+À CM*» \Y*´ ,,´ `´ e,´ `´ h*´ `,´ `´ k· n¶ A§ ­*» YY*´ ,· Z¶ A§ ›+Á \™ ”+¶ W™ ~*´ ,¸ tM,² :² z¹ € N-Æ a-´ …ž Z» ‡Y*´ ,´ ‹*´ ,´  c*´ ,´ ”g*´ ,´ — c*´ ,· š:%µ *´ ,´ ‹¶ £W*´ ,´ ‹¥¶ ©§ *» YY*´ ,· Z¶ A±    Ê   >  3 ) ª «  Ó $ ¬ ­  ‡ p ® ¯  • b ° ±   
+      
+ ² ³  Ë   V    G  H  I   K ' L . M 3 O \ R _ S q U x V  W ‡ X • Z   [ Ó _ Ú ` ç a ÷ c ú d	 g Ì   
+  >û …A  ´  É   /     *¶ ¶°    Ê            Ë         · ¸  É   /     *´ ¬    Ê        ¹    Ë          º )  É   4      » ¼Y½ ‚Y» ‚Y² Â· ÅS· È³ :±    Ë       "  Í     Î   
+        
